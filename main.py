@@ -472,9 +472,6 @@ def admin_dashboard():
 # User Dashboard
 def user_dashboard():
     global loans_df, loan_status_df
-    import google.generativeai as genai
-    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-    model = genai.GenerativeModel('gemini-pro')
    
     st.sidebar.title("User Menu")
     user_id = st.session_state.user["user_id"]
